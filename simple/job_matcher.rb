@@ -81,6 +81,3 @@ class JobMatcher
     jobseekers.sort { |a,b| a['id'].to_i <=> b['id'].to_i }
   end
 end
-
-JobMatcher.new(ARGV[0], ARGV[1]).process
-puts File.read('output.csv')
