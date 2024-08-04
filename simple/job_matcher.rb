@@ -4,10 +4,6 @@ class JobMatcher
   def initialize(jobseeker_csv_path, job_csv_path)
     @jobseekers = read_csv(jobseeker_csv_path, 'Jobseeker')
     @jobs = read_csv(job_csv_path, 'Job')
-
-  rescue ArgumentError => e
-    puts e
-    exit 0
   end
 
   # jobseekers have 3 columns named id, name, skills
