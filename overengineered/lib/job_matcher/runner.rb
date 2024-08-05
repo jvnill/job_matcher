@@ -32,7 +32,7 @@ module JobMatcher
       results.each do |jobseeker|
         jobseeker[:job_matches].sort! do |a, b|
           if a[:matching_skills_percentage] == b[:matching_skills_percentage]
-            a[:id] <=> b[:id]
+            a[:job][:id] <=> b[:job][:id]
           else
             b[:matching_skills_percentage] <=> a[:matching_skills_percentage]
           end
